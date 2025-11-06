@@ -1,0 +1,173 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: linear-gradient(135deg, #f6f7fb 0%, #e2e8f0 100%);
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 35px 45px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-3px);
+}
+
+.auth-card h2 {
+    margin-bottom: 25px;
+    color: #0d6efd;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ==== Inputs ==== */
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.auth-card input,
+.auth-card select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cfd4da;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15);
+}
+
+/* ==== Botones ==== */
+.auth-card button {
+    width: 100%;
+    padding: 9px 0;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón principal */
+.auth-card button[type="submit"] {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.auth-card button[type="submit"]:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.03);
+}
+
+/* Botón cancelar */
+.auth-card .btn-cancel {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 10px;
+}
+
+.auth-card .btn-cancel:hover {
+    background-color: #5a6268;
+    transform: scale(1.03);
+}
+
+/* ==== Mensajes ==== */
+.auth-card p {
+    margin-top: 12px;
+    color: red;
+    font-size: 13px;
+}
+
+/* ==== Animación suave al cargar ==== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==== Responsivo ==== */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 25px 20px;
+    }
+
+    .auth-card h2 {
+        font-size: 22px;
+    }
+}
+
+/* ==== PIE DE PÁGINA (LOGIN / REGISTER) ==== */
+
+.auth-footer {
+    margin-top: 18px;
+    font-size: 13.5px;
+    color: #555;
+}
+
+.auth-footer p {
+    margin: 0;
+}
+
+.auth-link {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* Logo opcional encima del título */
+.auth-logo {
+    width: 60px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+/* ==== Mensajes visuales ==== */
+.auth-error {
+    margin-top: 12px;
+    background-color: #f8d7da;
+    color: #842029;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #f5c2c7;
+    font-size: 14px;
+}
+
+.auth-success {
+    margin-top: 12px;
+    background-color: #d1e7dd;
+    color: #0f5132;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #badbcc;
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-in;
+}

@@ -1,0 +1,153 @@
+/* Contenedor principal */
+.reportero-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #f9fafb;
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Encabezado */
+.reportero-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reportero-header h2 {
+    font-size: 2rem;
+    color: #1f2937;
+}
+
+.reportero-header p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin: 8px 0;
+}
+
+.reportero-header button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reportero-header button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Listado de noticias */
+.noticias-listado {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de noticia */
+.noticia-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-left: 6px solid #2563eb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.noticia-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.noticia-card h3 {
+    font-size: 1.2rem;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.noticia-card p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 4px 0;
+}
+
+/* Botones dentro de tarjeta */
+.noticia-card button {
+    margin-top: 12px;
+    margin-right: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón editar */
+.noticia-card button:first-of-type {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.noticia-card button:first-of-type:hover {
+    background-color: #d97706;
+    transform: translateY(-2px);
+}
+
+/* Botón marcar como terminada */
+.noticia-card button:last-of-type {
+    background-color: #10b981;
+    color: white;
+}
+
+.noticia-card button:last-of-type:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .reportero-container {
+        padding: 16px;
+    }
+
+    .reportero-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .reportero-header button {
+        width: 100%;
+    }
+
+    .noticias-listado {
+        grid-template-columns: 1fr;
+    }
+}
+
+.imagen-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.imagen-noticia {
+    max-width: 200px;
+    /* ✅ límite visual en pantallas grandes */
+    width: 100%;
+    /* ✅ se adapta al contenedor */
+    height: auto;
+    /* ✅ mantiene proporción natural */
+    object-fit: contain;
+    border-radius: 8px;
+}
